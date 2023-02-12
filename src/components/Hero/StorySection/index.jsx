@@ -5,7 +5,7 @@ import Members from "../Members";
 
 const StorySection = () => {
   return (
-    <section className="flex">
+    <section className="container flex px-3 justify-center relative h-auto">
       <Members/>
       <Cards />
     </section>

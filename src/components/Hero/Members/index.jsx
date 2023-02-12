@@ -1,36 +1,52 @@
 import React, { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 const MembersMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+	const [isOpen, setIsOpen] = useState(false);
 
-  return (
-    <div className="relative">
-      <button
-        className="flex items-center px-3 py-2 bg-gray-100 text-gray-800 border border-gray-300 rounded hover:bg-gray-200 hover:border-gray-400"
-        onClick={() => setIsOpen(!isOpen)}
-      >
-        Presidents
-        <svg className="fill-current h-3 w-3" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Presidents</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-        </svg>
-      </button>
+	const toggleDropdown = () => {
+		setIsOpen(!isOpen);
+	};
 
-      <div
-        className={`${
-          isOpen
-            ? "block"
-            : "hidden"
-        } absolute mt-2 origin-top-left rounded-md shadow-lg`}
-      >
-        <div className="bg-white rounded-md shadow-xs">
-          <p className="block px-4 py-2 text-sm text-gray-700">George Washington</p>
-          <p className="block px-4 py-2 text-sm text-gray-700">Abraham Lincoln</p>
-          <p className="block px-4 py-2 text-sm text-gray-700">Franklin D. Roosevelt</p>
-        </div>
-      </div>
-    </div>
-  );
+	return (
+		<div className="absolute bottom-0 left-0 ml-2 flex flex-col-reverse z-20">
+			<div />
+			<div className="relative">
+				<button
+					className="dropdown-button w-40 px-3 py-2 bg-gray-600 text-white border border-transparent hover:bg-gray-700 hover:border-gray-700"
+					onClick={toggleDropdown}>
+					Members
+				</button>
+				{isOpen && (
+					<ul
+						className="dropdown-menu absolute bg-white top-0 left-0 mt-2 py-2 w-40 shadow overflow-hidden"
+						style={{
+							transform: "translateY(-106%)",
+						}}>
+						<li className="px-2 py-2 truncate cursor-pointer hover:bg-gray-200">
+							<span>
+								<FontAwesomeIcon icon={faUser} className="mr-3" />
+								George Washington
+							</span>
+						</li>
+						<li className="px-2 py-2 truncate cursor-pointer hover:bg-gray-200">
+							<span>
+								<FontAwesomeIcon icon={faUser} className="mr-3" />
+								Abraham Lincoln
+							</span>
+						</li>
+						<li className="px-2 py-2 truncate cursor-pointer hover:bg-gray-200">
+							<span>
+								<FontAwesomeIcon icon={faUser} className="mr-3" />
+								Franklin D. Roosevelt
+							</span>
+						</li>
+					</ul>
+				)}
+			</div>
+		</div>
+	);
 };
 
 export default MembersMenu;

@@ -1,10 +1,10 @@
 import { Routes, Route } from "react-router-dom";
 import NavigationBanner from "components/Navigation";
-import Home from "components/Home";
-import Registration from "components/Registration";
-import CreateStory from "components/CreateStory";
-import Hero from "components/Hero";
-import Detail from "components/Detail";
+import Home from "pages/Home";
+import Registration from "pages/Registration";
+import CreateStory from "pages/CreateStory";
+import Hero from "pages/Hero";
+import Detail from "pages/Detail";
 
 const routes = [
 	{

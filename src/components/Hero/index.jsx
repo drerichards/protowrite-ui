@@ -4,7 +4,7 @@ import StorySection from "./StorySection";
 
 const Hero = () => {
   return (
-    <div className="bg-gray-900 min-h-screen">
+    <div className="bg-gray-900 min-h-screen overflow-auto">
       <HeroSection />
       <StorySection />
     </div>
