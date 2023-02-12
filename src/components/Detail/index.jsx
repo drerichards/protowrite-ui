@@ -1,9 +1,16 @@
-import React from 'react'
+import React from "react";
+import HeroSection from "./HeroSection";
+import StorySection from "./StorySection";
+import MembersMenu from "./MembersMenu";
 
-const Detail = () => {
+const Hero = () => {
   return (
-    <div>Detail</div>
-  )
-}
+    <div className="bg-gray-900 min-h-screen overflow-auto relative">
+      <HeroSection />
+      <StorySection />
+      <MembersMenu/>
+    </div>
+  );
+};
 
-export default Detail
+export default Hero;

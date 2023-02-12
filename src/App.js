@@ -3,7 +3,6 @@ import NavigationBanner from "components/Navigation";
 import Home from "pages/Home";
 import Registration from "pages/Registration";
 import CreateStory from "pages/CreateStory";
-import Hero from "pages/Hero";
 import Detail from "pages/Detail";
 
 const routes = [
@@ -18,10 +17,6 @@ const routes = [
 	{
 		path: "/create-story",
 		element: <CreateStory />,
-	},
-	{
-		path: "/hero",
-		element: <Hero />,
 	},
 	{
 		path: "/detail",

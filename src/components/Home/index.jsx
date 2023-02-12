@@ -1,4 +1,5 @@
 import React from "react";
+import Carousel from "./Carousel";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         </h1>
         <p className="text-lg text-gray-500 text-center my-12">Lorem ipsum</p>
       </div>
+      <Carousel />
     </div>
   );
 };

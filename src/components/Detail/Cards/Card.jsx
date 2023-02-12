@@ -12,7 +12,7 @@ const Card = ({ backgroundImage, title, caption, textBody }) => {
       >
         <div className="h-full flex d-flex flex-col relative">
           <div className="flex-1" />
-          <div className="flex-none h-40 absolute bottom-0 relative">
+          <div className="flex-none h-40 bottom-0 relative">
             <div className="absolute top-0 left-0 w-full h-full bg-cover backdrop-blur-md">
               <div className="w-full h-full bg-gray-800 opacity-50"></div>
             </div>
