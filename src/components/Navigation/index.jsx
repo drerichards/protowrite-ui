@@ -19,7 +19,12 @@ const NavigationBanner = () => (
       </PWLink>
     </div>
     <div className="flex items-center">
-      <PWLink to="/register" classes={"text-white mr-4"}>
+      <PWLink
+        to="/register"
+        classes={
+          "text-white mr-2 px-3 py-2 bg-gray-800 text-white border border-transparent hover:bg-gray-700 hover:border-gray-700"
+        }
+      >
         Register
       </PWLink>
       <NavigationDropdown />
