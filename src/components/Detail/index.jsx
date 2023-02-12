@@ -8,7 +8,7 @@ const Hero = () => {
     <div className="bg-gray-900 min-h-screen overflow-auto relative">
       <HeroSection />
       <StorySection />
-      <MembersMenu/>
+      <MembersMenu />
     </div>
   );
 };

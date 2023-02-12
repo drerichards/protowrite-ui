@@ -1,12 +1,17 @@
 import React, { useState, useEffect } from "react";
 import PWLink from "utils/PWLink.jsx";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavigationDropdown = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
 		const handleClick = (event) => {
-			if (!event.target.classList.contains("dropdown-button")) {
+			if (
+				!event.target.classList.contains("dropdown-button") &&
+				!event.target.classList.contains("menu-bars")
+			) {
 				setIsOpen(false);
 			}
 		};
@@ -29,13 +34,7 @@ const NavigationDropdown = () => {
 			<button
 				className="dropdown-button flex items-center px-3 py-2 bg-gray-800 text-white border border-transparent hover:bg-gray-700 hover:border-gray-700"
 				onClick={toggleDropdown}>
-				<svg
-					className="fill-current h-3 w-3 mr-2 mt-1"
-					viewBox="0 0 20 20"
-					xmlns="http://www.w3.org/2000/svg">
-					<title>Menu</title>
-					<path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z" />
-				</svg>
+				<FontAwesomeIcon icon={faBars} size="xs" className="menu-bars mr-2" />
 				Menu
 			</button>
 			<div

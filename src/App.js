@@ -6,35 +6,35 @@ import CreateStory from "pages/CreateStory";
 import Detail from "pages/Detail";
 
 const routes = [
-	{
-		path: "/",
-		element: <Home />,
-	},
-	{
-		path: "/register",
-		element: <Registration />,
-	},
-	{
-		path: "/create-story",
-		element: <CreateStory />,
-	},
-	{
-		path: "/detail",
-		element: <Detail />,
-	},
+  {
+    path: "/",
+    element: <Home />,
+  },
+  {
+    path: "/register",
+    element: <Registration />,
+  },
+  {
+    path: "/create-story",
+    element: <CreateStory />,
+  },
+  {
+    path: "/detail",
+    element: <Detail />,
+  },
 ];
 
 function App() {
-	return (
-		<>
-			<NavigationBanner />
-			<Routes>
-				{routes.map(({ path, element }) => (
-					<Route key={path} path={path} element={element} />
-				))}
-			</Routes>
-		</>
-	);
+  return (
+    <>
+      <NavigationBanner />
+      <Routes>
+        {routes.map(({ path, element }) => (
+          <Route key={path} path={path} element={element} />
+        ))}
+      </Routes>
+    </>
+  );
 }
 
 export default App;

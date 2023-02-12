@@ -4,18 +4,18 @@
 @import "dist/index.css";
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	margin: 0;
-	font-family: "Barlow Condensed", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: "Barlow Condensed", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .swiper-button-next,
 .swiper-button-prev,
 .swiper-pagination-bullet-active {
-	color: rgb(109, 130, 159) !important;
+  color: rgb(109, 130, 159) !important;
 }
