@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { BACKEND_API_URL } from "utils/constants";
 
-const StoryForm = () => {
+const CreateStory = () => {
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -47,7 +47,7 @@ const StoryForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="bg-white p-6 rounded-lg">
-      <div class="max-w-5xl pb-8">
+      <div className="max-w-5xl pb-8">
         <div className="mb-4">
           <label
             className="block text-gray-700 font-medium mb-2"
@@ -143,4 +143,4 @@ const StoryForm = () => {
   );
 };
 
-export default StoryForm;
+export default CreateStory;

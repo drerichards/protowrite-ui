@@ -1,31 +1,45 @@
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import NavigationBanner from "components/Navigation";
-import Home from "pages/Home";
-import Registration from "pages/Registration";
-import CreateStory from "pages/CreateStory";
+import Home from "components/Home";
+import Registration from "components/Registration";
+import CreateStory from "components/CreateStory";
+import Hero from "components/Hero";
+import Detail from "components/Detail";
 
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/register",
-    element: <Registration />,
-  },
-  {
-    path: "/create-story",
-    element: <CreateStory />,
-  },
-]);
+const routes = [
+	{
+		path: "/",
+		element: <Home />,
+	},
+	{
+		path: "/register",
+		element: <Registration />,
+	},
+	{
+		path: "/create-story",
+		element: <CreateStory />,
+	},
+	{
+		path: "/hero",
+		element: <Hero />,
+	},
+	{
+		path: "/detail",
+		element: <Detail />,
+	},
+];
 
 function App() {
-  return (
-    <>
-      <NavigationBanner />
-      <RouterProvider router={router} />
-    </>
-  );
+	return (
+		<>
+			<NavigationBanner />
+			<Routes>
+				{routes.map(({ path, element }) => (
+					<Route key={path} path={path} element={element} />
+				))}
+			</Routes>
+		</>
+	);
 }
 
 export default App;
